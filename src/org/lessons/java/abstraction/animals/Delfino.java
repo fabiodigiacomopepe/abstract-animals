@@ -1,6 +1,6 @@
 package org.lessons.java.abstraction.animals;
 
-public class Delfino extends Animale {
+public class Delfino extends Animale implements PossibilitaNuotare {
     // Passo il nome al super costruttore
     public Delfino(String name) {
         super(name);
@@ -15,5 +15,11 @@ public class Delfino extends Animale {
     @Override
     public void mangia() {
         System.out.println("Crostaceo");
+    }
+
+    // Faccio l'override di nuota dell'interfaccia PossibilitaNuotare
+    @Override
+    public void nuota() {
+        System.out.println("Sto nuotando!!!");
     }
 }

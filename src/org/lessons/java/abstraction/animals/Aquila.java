@@ -1,6 +1,6 @@
 package org.lessons.java.abstraction.animals;
 
-public class Aquila extends Animale {
+public class Aquila extends Animale implements PossibilitaVolare {
     // Passo il nome al super costruttore
     public Aquila(String name) {
         super(name);
@@ -15,5 +15,11 @@ public class Aquila extends Animale {
     @Override
     public void mangia() {
         System.out.println("Marmotta");
+    }
+
+    // Faccio l'override di vola dell'interfaccia PossibilitaVolare
+    @Override
+    public void vola() {
+        System.out.println("Sto volando!!!");
     }
 }
