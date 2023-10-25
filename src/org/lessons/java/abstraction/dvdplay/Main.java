@@ -35,21 +35,8 @@ public class Main {
         }
 
         Dispositivo[] dispositivi = new Dispositivo[1];
-
-        // Se tipo di dispositivo è uguale a 1, allora LETTORE DVD
-        if (Tipo == 1) {
-            // Creo oggetto "lettore_dvd" di tipo "LettoreDVD" passando come stringa "lettore dvd"
-            LettoreDVD lettore_dvd = (LettoreDVD) Creator.create("lettore dvd");
-            System.out.println("Dispositivo LETTORE DVD creato correttamente.");
-            dispositivi[0] = lettore_dvd;
-        }  // Se tipo di dispositivo è uguale a 2, allora PLAYSTATION
-        else if (Tipo == 2) {
-            // Creo oggetto "playstation" di tipo "Playstation" passando come stringa "playstation"
-            Playstation playstation = (Playstation) Creator.create("playstation");
-            System.out.println("Dispositivo PLAYSTATION creato correttamente.");
-            dispositivi[0] = playstation;
-        }
-
+        dispositivi[0] = Creator.create(Tipo);
+        
         int Scelta = 0;
         boolean exitScelta = false;
         while (!exitScelta) {

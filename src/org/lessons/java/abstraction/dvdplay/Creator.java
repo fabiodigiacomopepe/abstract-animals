@@ -1,15 +1,15 @@
 package org.lessons.java.abstraction.dvdplay;
 
 public class Creator {
-    public static Dispositivo create(String tipoDispositivo) {
+    public static Dispositivo create(int tipoDispositivo) {
 
-        // Se stringa in ingresso tipoDispositivo è uguale a lettore dvd
+        // Se numero in ingresso tipoDispositivo è uguale a 1
         // allora creo un nuovo dispositivo Lettore DVD
-        if (tipoDispositivo.equals("lettore dvd")) {
+        if (tipoDispositivo == 1) {
             return new LettoreDVD();
-        } // Se stringa in ingresso tipoDispositivo è uguale a playstation
+        } // Se numero in ingresso tipoDispositivo è uguale a 2
         // allora creo un nuovo dispositivo playstation
-        else if (tipoDispositivo.equals("playstation")) {
+        else if (tipoDispositivo == 2) {
             return new Playstation();
         } // ALTRIMENTI
         else {
